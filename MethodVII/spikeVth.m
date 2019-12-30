@@ -16,8 +16,10 @@ dvdt_vth= 0;                 % unit mV /20us
 
 
 
-% ======  Finding inflection point by using method VI =========
+% ======  Finding inflection point by using method III =========
 [Vth,Vth_loc, V,V_denoise,V1,V2,time]= findSpikeDvDtVth(spikeData,dvdt_vth, t_start,t_end,Fs,Fc);
+
+% ======  Finding inflection point by using method VII =========
 [Vth_Kp, Vth_Kp_loc,Kp]=findSpikeCur(V,V1,V2);
 
 
